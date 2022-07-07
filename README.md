@@ -1,10 +1,10 @@
 # web-api-go
 
-### create module
+### Create module
 ```
 $ go mod init
 ```
-### install libraries
+### Install libraries
 ```
 $ go get github.com/gin-gonic/gin
 ```

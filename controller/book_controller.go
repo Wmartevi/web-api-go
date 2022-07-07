@@ -37,9 +37,9 @@ func ShowBook(c *gin.Context) {
 
 func CreateBook(c *gin.Context) {
 	db := database.GetDatabase()
-	var book model.Book
+	var books model.Book
 
-	err := c.ShouldBindJSON(&book)
+	err := c.ShouldBindJSON(&books)
 
 	if err != nil {
 		c.JSON(400, gin.H{
@@ -48,7 +48,7 @@ func CreateBook(c *gin.Context) {
 		return
 	}
 
-	err = db.Create(&book).Error
+	err = db.Create(&books).Error
 
 	if err != nil {
 		c.JSON(400, gin.H{
@@ -56,7 +56,7 @@ func CreateBook(c *gin.Context) {
 		})
 		return
 	}
-	c.JSON(200, book)
+	c.JSON(200, books)
 }
 
 func ShowBooks(c *gin.Context) {

@@ -2,12 +2,12 @@
 
 ### create module
 
-- go mod init
+$ go mod init
 ### install libraries
 
-- go get github.com/gin-gonic/gin
-- go get gorm.io/gorm
-- go get gorm.io/driver/postgres
+$ go get github.com/gin-gonic/gin
+$ go get gorm.io/gorm
+$ go get gorm.io/driver/postgres
 
 ### API Archives
 

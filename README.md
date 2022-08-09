@@ -6,13 +6,13 @@ $ go mod init
 ```
 ### Install libraries
 ```
-$ go get github.com/gin-gonic/gin
+$ go install github.com/gin-gonic/gin@latest
 ```
 ```
-$ go get gorm.io/gorm
+go install gorm.io/gorm@latest
 ```
 ```
-$ go get gorm.io/driver/postgres
+$ go install gorm.io/driver/postgres@latest
 ```
 
 ### API Archives

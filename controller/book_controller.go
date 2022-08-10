@@ -22,7 +22,7 @@ func ShowBook(c *gin.Context) {
 
 	db := database.GetDatabase()
 
-	var book model.Book
+	var book model.Books
 	err = db.First(&book, newid).Error
 
 	if err != nil {
@@ -37,7 +37,7 @@ func ShowBook(c *gin.Context) {
 
 func CreateBook(c *gin.Context) {
 	db := database.GetDatabase()
-	var books model.Book
+	var books model.Books
 
 	err := c.ShouldBindJSON(&books)
 
@@ -61,7 +61,7 @@ func CreateBook(c *gin.Context) {
 
 func ShowBooks(c *gin.Context) {
 	db := database.GetDatabase()
-	var books []model.Book
+	var books []model.Books
 	err := db.Find(&books).Error
 
 	if err != nil {
@@ -75,7 +75,7 @@ func ShowBooks(c *gin.Context) {
 
 func UpdateBook(c *gin.Context) {
 	db := database.GetDatabase()
-	var book model.Book
+	var book model.Books
 
 	err := c.ShouldBindJSON(&book)
 
@@ -111,7 +111,7 @@ func DeleteBook(c *gin.Context) {
 
 	db := database.GetDatabase()
 
-	var book model.Book
+	var book model.Books
 	err = db.Delete(&book, newid).Error
 
 	if err != nil {
